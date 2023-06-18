@@ -35,14 +35,19 @@ function App() {
 
 function Avatar(props) {
   return (
-    <div className="avatar">
-      <img src={props.filename} alt="main picture" />
+    <div>
+      <img src={props.filename} alt="main picture" className="avatar" />
     </div>
   );
 }
 
 function Intro() {
-  return <div>Intro Placeholder</div>;
+  return (
+    <div className="data">
+      Technical Support Engineer for Production LifeCycle Application that's
+      been in use (and development) for over 3 decades.
+    </div>
+  );
 }
 
 function SkillList() {

@@ -50,9 +50,12 @@ function Avatar(props) {
 
 function Intro() {
   return (
-    <div className="data">
-      Technical Support Engineer for Production LifeCycle Application that's
-      been in use (and development) for over 3 decades.
+    <div>
+      <h1>Aleksander Jaworski</h1>
+      <p>
+        Technical Support Engineer for Production LifeCycle Application that's
+        been in use (and development) for over 3 decades.
+      </p>
     </div>
   );
 }

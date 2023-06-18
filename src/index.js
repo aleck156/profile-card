@@ -17,6 +17,13 @@ root.render(
 reportWebVitals();
 
 function App() {
+  const skills = [
+    "SQL",
+    "Virtual Machines",
+    "AWS",
+    "Azure",
+    "HTML/CSS/Js ES6+",
+  ];
   return (
     <div className="App">
       <div className="card">
@@ -26,7 +33,7 @@ function App() {
           {/* Should contain one Skill component
         for each web dev skill that you have,
         customized with props */}
-          <SkillList />
+          <SkillList skillArray={skills} />
         </div>
       </div>
     </div>
@@ -50,6 +57,16 @@ function Intro() {
   );
 }
 
-function SkillList() {
-  return <div>SkillList Placeholder</div>;
+function SkillList(props) {
+  return (
+    <div className="skill-list">
+      {props.skillArray.map((el) => (
+        <Skill skill={el} />
+      ))}
+    </div>
+  );
+}
+
+function Skill(props) {
+  return <div className="skill">{props.skill}</div>;
 }

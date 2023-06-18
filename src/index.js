@@ -71,5 +71,17 @@ function SkillList(props) {
 }
 
 function Skill(props) {
-  return <div className="skill">{props.skill}</div>;
+  return (
+    <div
+      className="skill"
+      style={{
+        border: "1px solid black",
+        backgroundColor: "#".concat(
+          Math.floor(Math.random() * 16777215).toString(16)
+        ),
+      }}
+    >
+      {props.skill}
+    </div>
+  );
 }
